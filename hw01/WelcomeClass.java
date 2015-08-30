@@ -16,7 +16,7 @@ public class WelcomeClass{
         System.out.println("|-T--C--I--2--1--8-|");
         System.out.println(" \\ /\\ /\\ /\\ /\\ /\\ /");
         System.out.println("  v  v  v  v  v  v");
-        System.out.println("This summer I worked at a summer camp. I was with 7-8 year old kids and we played sports all day");
+        System.out.println("This summer I worked at a summer camp. I was with 7-8 year old kids and we played sports all day.");
 
     }
 }
