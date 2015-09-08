@@ -37,10 +37,11 @@ public class Arithmetic{
      double envelopeCost$=3.25;
      double envelopeCostPreTax=envelopeCost$*nEnvelopes;
      double envelopeTax1=envelopeCostPreTax*taxPercent;
+     //round envelope tax to two decimals
      double envelopeTax = Math.round(envelopeTax1 * 100.0) / 100.0;
      double totalEnvelopeCost$=envelopeCostPreTax+envelopeTax;
      
-    //Computer total
+    //Compute total
     double totalCostPreTax = sockCostPreTax+glassCostPreTax+envelopeCostPreTax;
     double totalTax = sockTax+envelopeTax+glassTax;
     double totalCost = totalSockCost$+totalEnvelopeCost$+totalGlassCost$;
