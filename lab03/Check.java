@@ -32,7 +32,7 @@ public class Check{
     totalCost = checkCost * (1 + tipPercent); 
     //calculate cost per person
     costPerPerson = totalCost / numPeople;
-    //get the whole amount, dropping decimal fraction 
+    //get whole amount, drop decimal fraction
     dollars = (int)costPerPerson;
     dimes = (int)(costPerPerson * 10) % 10;
     pennies = (int)(costPerPerson * 100) % 10;
