@@ -6,42 +6,54 @@
 //import scanner class
 import java.util.Scanner;
 
+import java.util.Arrays;
+
 //declare main class
 public class Methods{
     //declare method to calculate mean
-    public static double Mean(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j){
+    public static double mean(double a, double b, double c, double d, double e, double f, double g, double h, double i, double j){
         //calculate mean
         return (a+b+c+d+e+f+g+h+i+j)/10;
     }
     //declare method to calculate median
-    public static double Median(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j){
+    public static double median(double e, double f){
+        //System.out.print(e+" "+f);
         //calculate median
-        return (e+f)/2;   
+       double median = (e+f)/2;
+       return median;
+      
     }
+    //declare print method
     public static void print(double a, double b){
+        //print out mean and median
         System.out.println("Mean is "+ a+" and median is "+b);
 
     }
     //declare main method
     public static void main(String[] args){
+        //scan for inputs
         Scanner scan = new Scanner(System.in);
+        //ask user for 10 numbers
         System.out.println("Enter 10 numbers");
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        int d = scan.nextInt();
-        int e = scan.nextInt();
-        int f = scan.nextInt();
-        int g = scan.nextInt();
-        int h = scan.nextInt();
-        int i = scan.nextInt();
-        int j = scan.nextInt();
-        
-        double mean = Mean(a,b,c,d,e,f,g,h,i,j);
-        double median = Median(a,b,c,d,e,f,g,h,i,j);
+        //scan for user input
+        double a = scan.nextInt();
+        double b = scan.nextInt();
+        double c = scan.nextInt();
+        double d = scan.nextInt();
+        double e = scan.nextInt();
+        double f = scan.nextInt();
+        double g = scan.nextInt();
+        double h = scan.nextInt();
+        double i = scan.nextInt();
+        double j = scan.nextInt();
         
         
-        print(mean, median);
+        //set mean and median variables
+        double mean1 = mean(a,b,c,d,e,f,g,h,i,j);
+        double median1 = median(e,f);
+        
+        //call print method to print out final values
+        print(mean1, median1);
     }
     
 }

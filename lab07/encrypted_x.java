@@ -24,7 +24,7 @@ public class encrypted_x{
                 for (int j = 0;j<input;j++){
                     if(i==j){
                         System.out.print(" ");
-                    }else if (i==(input-j)){
+                    }else if (i==(input-j-1)){
                         System.out.print(" ");
                     }else{
                         System.out.print("*");
