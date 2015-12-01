@@ -4,6 +4,7 @@
 //this program shifts values at a specific index to the end of the array
 
 //import scanner
+
 import java.util.Scanner;
 
 //initialize class 
@@ -33,6 +34,12 @@ public class move_array{
         for(int i=0;i<array.length;i++){
             array[i]=(int)(Math.random()*100);
         }
+        //print original array
+         for(int j=0;j<array.length;j++){
+           System.out.print(array[j]+" ");
+       }
+       
+       System.out.println("");
         
         
         //ask user what value of index they would like to move
@@ -41,9 +48,9 @@ public class move_array{
         try{
             move = scan.nextInt();
             //try and initialize a test variable which is set as array index user input
-            int test = array[move+1];
+            int test = array[move];
         }catch(Exception e){
-            System.err.print(e);
+            System.out.println("1");
         }
         
         
@@ -51,19 +58,48 @@ public class move_array{
        //create temporary array
        int[] temparray = new int [size];
        
-       //for loop to fill temp array
-       for(int i=0;i<move-1;i++){
+      
+       
+       int save =array[move];
+       for(int i=move;i<array.length-1;i++){
+           array[i]=array[i+1];
+       }
+       array[array.length-1]=save;
+       
+/*
+//for loop to fill temp array
+       for(int i=0;i<move;i++){
            temparray[i]=array[i];
        }
-       for(int i=move;i<array.length-move-1;i++){
+//if else statements to check what bounds to use in for loops and to fill array
+       if(array.length-move+1==array.length){
+       for(int i=move;i<array.length-move;i++){
+           if(i==array.length-1){
+               temparray[i-1]=array[i];
+           }else{
            temparray[i]=array[i+1];
+           }
        }
-       temparray[temparray.length]=array[0];
+       }else{
+             for(int i=move;i<array.length-move+1;i++){
+                 if(i==array.length-1){
+                     temparray[i-1]=array[i];
+                 }else{
+           temparray[i]=array[i+1]; 
+                 }
+       }
+       }
+       */
+       
+       
+       
+       
+       temparray[temparray.length-1]=array[move];
        
        
        
        for(int j=0;j<array.length;j++){
-           System.out.print(temparray[j]+" ");
+           System.out.print(array[j]+" ");
        }
        
        
@@ -84,3 +120,5 @@ public class move_array{
         
     }
     
+
+
